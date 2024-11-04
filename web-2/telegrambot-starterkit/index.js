@@ -11,6 +11,7 @@ app.use(
 ) // for parsing application/x-www-form-urlencoded
 
 //This is the route the API will call
+
 app.post("/new-message", function(req, res) {
 	const { message } = req.body
 
@@ -45,8 +46,11 @@ app.post("/new-message", function(req, res) {
 })
 
 // Finally, start our server
-app.listen(3000, function() {
-	console.log("Telegram app listening on port 3000!")
-})
+const PORT = process.env.PORT || 3000; // Use the PORT environment variable or default to 3000
+app.listen(PORT, function() {
+    console.log(`Telegram app listening on port ${PORT}!`);
+});
 
-//V4bv1Z0AVbOmAPqeeGbg3hV8
+
+//V4bv1Z0AVbOmAPqeeGbg3hV8-vt
+// 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-gpat
